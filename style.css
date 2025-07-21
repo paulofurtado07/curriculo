@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+}
+
+.botao-cartas {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.botao-cartas:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #888;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px #555;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.card ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+}
+
+.card a {
+  color: #00aaff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Card Perfil com duas colunas */
+.card.perfil {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card.perfil .texto {
+  flex: 1 1 250px;
+}
+
+.card.perfil .imagem {
+  flex: 1 1 250px;
+  text-align: right;
+}
+
+.card.perfil img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .card.perfil {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card.perfil .imagem {
+    text-align: center;
+  }
+}
